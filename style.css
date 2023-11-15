@@ -1,0 +1,350 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+button {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+	display: flex;
+}
+
+.logo-container {
+	flex: 1;
+}
+.logo {
+	font-weight: 400;
+	margin: 5px;
+}
+nav {
+	flex: 2;
+}
+.nav-links {
+	justify-content: space-around;
+	list-style: none;
+}
+.nav-link {
+	color: #5f5f79;
+	font-size: 18px;
+	text-decoration: none;
+}
+.cart {
+	flex: 1;
+	justify-content: flex-end;
+}
+
+.presentation {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	min-height: 80vh;
+	align-items: center;
+}
+.introduction {
+	flex: 1;
+}
+.intro-text h1 {
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
+}
+.cta {
+	padding: 50px 0px 0px 0px;
+}
+.cta-select {
+	border: 2px solid #c36cbb;
+	background: transparent;
+	color: #c36cbb;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+}
+.cta-add {
+	background: #c36cbb;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	color: white;
+	margin: 30px 0px 0px 30px;
+}
+
+.cover {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	height: 60vh;
+}
+.cover img {
+	height: 100%;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+
+.big-circle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+.medium-circle {
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	z-index: -1;
+	height: 60%;
+	opacity: 0.4;
+}
+.small-circle {
+	position: absolute;
+	bottom: 0%;
+	left: 20%;
+	z-index: -1;
+}
+
+.laptop-select {
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	right: 20%;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-1000px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.cover img {
+		height: 80%;
+	}
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
+}
+
+
+
+
+/* Gradient Background Animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(-45deg, #ffd3c6, #ffd6d6, #b6ecff, #dcfff7);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+/* 3D Transform for Images */
+.cover img {
+    transition: transform 0.5s ease;
+}
+
+.cover img:hover {
+    transform: scale(1.6) rotateY(10deg);
+}
+
+
+/* Sophisticated Hover Effects */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #c36cbb;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    webkit-backdrop-filter: blur(20px); /* Glassmorphism effect */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px; /* Adjust as per your logo */
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #c36cbb; /* Highlight color */
+}
+
+
+/* Main Presentation Section Enhancements: */
+.cta-select, .cta-add {
+    background: linear-gradient(45deg, #6f6f89, #494964);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-select:hover, .cta-add:hover {
+    transform: translateY(-10px); /* Elevate button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Define default light theme */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --header-bg-color: rgba(255, 255, 255, 0.8);
+    --link-color: #5f5f79;
+    --button-bg-color: linear-gradient(45deg, #6f6f89, #494964);
+    --button-text-color: white;
+    --hover-color: #c36cbb;
+    --intro-text-color: #585772;
+}
+
+/* Define dark theme */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-bg-color: rgba(23, 23, 23, 0.8);
+    --link-color: #ffffff;
+    --button-bg-color: linear-gradient(45deg, #3c3c5e, #232348);
+    --button-text-color: #d1d1d1;
+    --hover-color: #bb86fc;
+    --intro-text-color: #cccccc;
+}
+
+/* Applying Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    background: var(--header-bg-color);
+}
+
+.nav-link {
+    color: var(--link-color);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-link:hover::after {
+    background-color: var(--hover-color);
+}
+
+.intro-text p {
+    color: var(--intro-text-color);
+}
+
+.cta-select, .cta-add {
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+/* Rest of your CSS */
