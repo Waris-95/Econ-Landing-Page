@@ -192,9 +192,9 @@ nav {
 }
 
 body {
-    background: linear-gradient(-45deg, #ffd3c6, #ffd6d6, #b6ecff, #dcfff7);
+    background: linear-gradient(-45deg, #ffd3c6, #fedada, #e7f8fe, #dcfff7);
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 7s ease infinite;
 }
 
 /* 3D Transform for Images */
@@ -288,63 +288,26 @@ header {
 
 
 
-/* Define default light theme */
-:root {
-    --background-color: #fff;
-    --text-color: #333;
-    --header-bg-color: rgba(255, 255, 255, 0.8);
-    --link-color: #5f5f79;
-    --button-bg-color: linear-gradient(45deg, #6f6f89, #494964);
-    --button-text-color: white;
-    --hover-color: #c36cbb;
-    --intro-text-color: #585772;
+/* Footer*/
+.footer {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark grey text */
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Define dark theme */
-[data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --header-bg-color: rgba(23, 23, 23, 0.8);
-    --link-color: #ffffff;
-    --button-bg-color: linear-gradient(45deg, #3c3c5e, #232348);
-    --button-text-color: #d1d1d1;
-    --hover-color: #bb86fc;
-    --intro-text-color: #cccccc;
+.footer p {
+    margin: 5px 0;
 }
 
-/* Applying Variables */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-}
-
-header {
-    display: flex;
-    width: 90%;
-    height: 10vh;
-    margin: auto;
-    align-items: center;
-    background: var(--header-bg-color);
-}
-
-.nav-link {
-    color: var(--link-color);
-    font-size: 18px;
+.footer a {
+    color: #333;
     text-decoration: none;
+    transition: color 0.5s;
 }
 
-.nav-link:hover::after {
-    background-color: var(--hover-color);
+.footer a:hover {
+    text-decoration: underline;
+	color: #c36cbb;
 }
-
-.intro-text p {
-    color: var(--intro-text-color);
-}
-
-.cta-select, .cta-add {
-    background: var(--button-bg-color);
-    color: var(--button-text-color);
-}
-
-/* Rest of your CSS */
